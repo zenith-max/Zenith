@@ -114,7 +114,6 @@ export default function MobileApp() {
         >
           <div className="-rotate-40 flex-none mobile-hunger-track">
             <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
-            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
           </div>
         </div>
         <div
@@ -122,7 +121,6 @@ export default function MobileApp() {
           data-node-id="21:201"
         >
           <div className="-rotate-40 flex-none mobile-hunger-track">
-            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
             <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
           </div>
         </div>
