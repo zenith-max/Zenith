@@ -69,10 +69,12 @@ export default function Desktop() {
       </div>
       <div className="absolute contents right-[-263.4px] top-[210px]" data-node-id="1:228">
         <div className="absolute flex h-[366.062px] items-center justify-center right-[524.63px] top-[525px] translate-x-full w-[413.022px] overflow-visible" data-node-id="1:229">
-          <div className="-rotate-40 flex-none desktop-hunger-track">
-            <div className="desktop-hunger-copy">
-              <p className="[word-break:break-word] font-['Arial_Narrow',Arial,sans-serif] font-stretch-condensed leading-[normal] not-italic relative text-[#151515] text-[70px] whitespace-nowrap">HUNGER TO GROW !</p>
-              <p className="[word-break:break-word] font-['Arial_Narrow',Arial,sans-serif] font-stretch-condensed leading-[normal] not-italic relative text-[#151515] text-[70px] whitespace-nowrap">HUNGER TO GROW !</p>
+          <div className="-rotate-40 flex-none desktop-hunger-window">
+            <div className="desktop-hunger-track">
+              <div className="desktop-hunger-copy">
+                <p className="[word-break:break-word] font-['Arial_Narrow',Arial,sans-serif] font-stretch-condensed leading-[normal] not-italic relative text-[#151515] text-[70px] whitespace-nowrap">HUNGER TO GROW !</p>
+                <p className="[word-break:break-word] font-['Arial_Narrow',Arial,sans-serif] font-stretch-condensed leading-[normal] not-italic relative text-[#151515] text-[70px] whitespace-nowrap">HUNGER TO GROW !</p>
+              </div>
             </div>
           </div>
         </div>
