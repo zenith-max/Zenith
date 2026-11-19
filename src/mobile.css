@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Inter:Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins:Regular";
+  src: url("https://static.figma.com/font/Poppins-Regular_6") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins:SemiBold";
+  src: url("https://static.figma.com/font/Poppins-SemiBold_6") format("woff2");
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  body {
+    min-width: 320px;
+  }
+
+  .font-compressed {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-stretch: condensed;
+  }
+
+  .font-helvetica-bold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+}

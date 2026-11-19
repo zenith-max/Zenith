@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter:Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins:Regular";
+  src: url("https://static.figma.com/font/Poppins-Regular_6") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins:SemiBold";
+  src: url("https://static.figma.com/font/Poppins-SemiBold_6") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@layer base {
+  html {
+    background: #151515;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: #151515;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+@layer utilities {
+  .font-compressed {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-stretch: condensed;
+    font-weight: 400;
+  }
+
+  .font-helvetica-bold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .mobile-page .scale-y-96 {
+    --tw-scale-y: 0.96;
+  }
+}

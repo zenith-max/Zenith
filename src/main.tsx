@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import TermsPage from './TermsPage'
 import PrivacyPage from './PrivacyPage'
+import MobileApp from './MobileApp'
 import './index.css'
+import './mobile.css'
 
 function Root() {
   const getPage = () => {
@@ -13,6 +15,7 @@ function Root() {
   }
 
   const [page, setPage] = useState(getPage)
+  const [mobile, setMobile] = useState(() => window.matchMedia('(max-width: 700px)').matches)
 
   useEffect(() => {
     const onHashChange = () => {
@@ -32,7 +35,16 @@ function Root() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
-  return page === 'terms' ? <TermsPage /> : page === 'privacy' ? <PrivacyPage /> : <App />
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 700px)')
+    const onMediaChange = () => setMobile(media.matches)
+    media.addEventListener('change', onMediaChange)
+    return () => media.removeEventListener('change', onMediaChange)
+  }, [])
+
+  const isMobile = () => window.matchMedia('(max-width: 700px)').matches
+
+  return mobile ? (page === 'terms' ? <TermsPage /> : page === 'privacy' ? <PrivacyPage /> : <MobileApp />) : (page === 'terms' ? <TermsPage /> : page === 'privacy' ? <PrivacyPage /> : <App />)
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
