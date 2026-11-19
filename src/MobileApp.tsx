@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const assetPathPrefix = "/assets/mobile";
 const imgRectangle1 = `${assetPathPrefix}/ad5f3.png`;
 const img0258DbeaB6D44F02B62B99B7E0Aa6D781 = `${assetPathPrefix}/6f371.png`;
@@ -11,6 +13,16 @@ const imgLine3 = `${assetPathPrefix}/eb801.svg`;
 const imgLine7 = `${assetPathPrefix}/ad2af.svg`;
 
 export default function MobileApp() {
+  const [activeService, setActiveService] = useState<"uiux" | "fullstack" | "landing" | "brand" | "support">("uiux");
+
+  const serviceDescriptions: Record<"uiux" | "fullstack" | "landing" | "brand" | "support", string> = {
+    uiux: "We craft intuitive, visually striking UI/UX experiences that bring ideas to life. From seamless user journeys to thoughtfully designed interfaces, we blend creativity with functionality to build digital experiences that are engaging, effortless, and memorable.",
+    fullstack: "We develop powerful, scalable, and responsive web applications, combining intuitive frontends with robust backend systems to bring your ideas to life.",
+    landing: "We design high-impact landing pages that capture attention, communicate your message, and turn visitors into customers through compelling visuals and seamless user experiences.",
+    brand: "We build distinctive brand identities through thoughtful visuals, creative direction, and realistic mockups that give your brand a consistent and memorable presence.",
+    support: "We keep your digital presence running smoothly with reliable support, regular updates, performance optimization, and ongoing maintenance to ensure everything works flawlessly.",
+  };
+
   return (
     <div
       className="mobile-page bg-[#151515] relative w-full h-[793.8461538vw] overflow-hidden"
@@ -74,7 +86,7 @@ export default function MobileApp() {
         data-node-id="21:197"
         style={{ containerType: "size" }}
       >
-        <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+        <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw] mobile-planet">
           <div className="relative size-full" data-name="0258dbea-b6d4-4f02-b62b-99b7e0aa6d78 1">
             <img
               alt=""
@@ -100,20 +112,18 @@ export default function MobileApp() {
           className="absolute flex h-[93.862051vw] items-center justify-center right-[102.825641vw] top-[139.487179vw] translate-x-full w-[105.903077vw]"
           data-node-id="21:200"
         >
-          <div className="-rotate-40 flex-none">
-            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">
-              HUNGER TO GROW !
-            </p>
+          <div className="-rotate-40 flex-none mobile-hunger-track">
+            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
+            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
           </div>
         </div>
         <div
           className="absolute flex h-[93.862051vw] items-center justify-center right-[8.723077vw] top-[61.025641vw] translate-x-full w-[105.903077vw]"
           data-node-id="21:201"
         >
-          <div className="-rotate-40 flex-none">
-            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">
-              HUNGER TO GROW !
-            </p>
+          <div className="-rotate-40 flex-none mobile-hunger-track">
+            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
+            <p className="[word-break:break-word] font-compressed leading-[normal] not-italic relative text-[#151515] text-[17.948718vw] whitespace-nowrap">HUNGER TO GROW !</p>
           </div>
         </div>
       </div>
@@ -306,35 +316,38 @@ export default function MobileApp() {
           </div>
         </div>
         <p
-          className="[word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.358974vw] text-white top-[401.538462vw] translate-x-full whitespace-nowrap"
+          className={`mobile-service-title [word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.358974vw] whitespace-nowrap top-[401.538462vw] translate-x-full ${activeService === "support" ? "active" : ""}`}
+          onClick={() => setActiveService("support")}
           data-node-id="21:236"
-        >
-          Support maintance
-        </p>
+        >Support &amp; Maintenance</p>
         <p
-          className="[word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.358974vw] text-white top-[377.948718vw] translate-x-full whitespace-nowrap"
+          className={`mobile-service-title [word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.358974vw] whitespace-nowrap top-[377.948718vw] translate-x-full ${activeService === "landing" ? "active" : ""}`}
+          onClick={() => setActiveService("landing")}
           data-node-id="21:237"
-        >
-          Landing pages
-        </p>
+        >Landing Pages</p>
         <p
-          className="[word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.102564vw] text-white top-[390vw] translate-x-full whitespace-nowrap"
+          className={`mobile-service-title [word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.076923vw] text-[4.358974vw] whitespace-nowrap top-[390vw] translate-x-full ${activeService === "brand" ? "active" : ""}`}
+          onClick={() => setActiveService("brand")}
           data-node-id="21:238"
-        >{`Brand design & mockup`}</p>
+        >Brand Design &amp; Mockup</p>
         <p
-          className="[word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] left-[46.923077vw] not-italic text-[4.358974vw] text-white top-[356.153846vw] whitespace-nowrap"
+          className={`mobile-service-title [word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic left-[46.923077vw] text-[4.358974vw] whitespace-nowrap top-[356.153846vw] ${activeService === "uiux" ? "active" : ""}`}
+          onClick={() => setActiveService("uiux")}
           data-node-id="21:239"
-        >{`UIUX design `}</p>
+        >UI/UX Design</p>
         <p
-          className="[word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.589744vw] text-[4.102564vw] text-white top-[367.435897vw] translate-x-full whitespace-nowrap"
+          className={`mobile-service-title [word-break:break-word] absolute font-['Poppins:SemiBold'] leading-[normal] not-italic right-[53.589744vw] text-[4.102564vw] whitespace-nowrap top-[367.435897vw] translate-x-full ${activeService === "fullstack" ? "active" : ""}`}
+          onClick={() => setActiveService("fullstack")}
           data-node-id="21:240"
-        >
-          Full stack development
+        >Full Stack Development</p>
+      </div>
+      <div
+        className="absolute bg-[#323232] h-[65.128205vw] left-[4.358974vw] rounded-[6.410256vw] top-[348.974359vw] w-[39.74359vw]"
+        data-node-id="21:241"
+      >
+        <p key={activeService} className="mobile-service-description">
+          {serviceDescriptions[activeService]}
         </p>
-        <div
-          className="absolute bg-[#323232] h-[65.128205vw] left-[4.358974vw] rounded-[6.410256vw] top-[348.974359vw] w-[39.74359vw]"
-          data-node-id="21:241"
-        />
       </div>
       <div
         className="[word-break:break-word] absolute aspect-[624/49] contents font-compressed leading-[normal] left-[6.410256vw] not-italic right-[-66.410256vw] top-[428.461538vw] whitespace-nowrap"
@@ -516,7 +529,9 @@ export default function MobileApp() {
           aria-label="Get started"
           className="absolute bg-[#d4aa7d] bottom-[68.205128vw] h-[7.692308vw] right-[5.641026vw] rounded-[25.641026vw] w-[24.102564vw]"
           data-node-id="21:270"
-          href="#contact"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfV-AyYNGR29Yfb5kv_t_ZDzbvUrvuUv3F-395QJAGsIswy4Q/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener noreferrer"
         />
         <p
           className="[word-break:break-word] absolute font-helvetica-bold leading-[25.641026vw] not-italic pointer-events-none right-[28.461538vw] text-[3.846154vw] text-black top-[711.538462vw] tracking-[0.076923vw] translate-x-full whitespace-nowrap"
@@ -530,18 +545,6 @@ export default function MobileApp() {
         data-node-id="21:272"
         id="contact"
       >
-        <p
-          className="[word-break:break-word] absolute bottom-[6.405128vw] font-['Poppins:Regular'] leading-[normal] not-italic right-[20.769231vw] text-[2.564103vw] text-white translate-x-full translate-y-full whitespace-nowrap"
-          data-node-id="21:274"
-        >
-          Privacy policy
-        </p>
-        <p
-          className="[word-break:break-word] absolute bottom-[6.405128vw] font-['Poppins:Regular'] h-[29.230769vw] leading-[normal] left-[1.282051vw] not-italic right-[-52.564103vw] text-[2.564103vw] text-white translate-y-full"
-          data-node-id="21:275"
-        >
-          © 2026 zenith studio / All Rights Recived
-        </p>
         <p
           className="[word-break:break-word] absolute bottom-[6.405128vw] font-['Poppins:Regular'] leading-[normal] not-italic right-[33.589744vw] text-[2.564103vw] text-white translate-x-full translate-y-full whitespace-nowrap"
           data-node-id="21:276"
@@ -572,12 +575,22 @@ export default function MobileApp() {
           className="[word-break:break-word] absolute bottom-[39.74359vw] font-['Poppins:Regular'] leading-[0] left-0 not-italic right-[4.615385vw] text-[3.846154vw] text-right text-white translate-y-full"
           data-node-id="21:280"
         >
-          <p className="leading-[6.410256vw] mb-0">Instagram</p>
-          <p className="leading-[6.410256vw] mb-0">WhatsApp</p>
-          <p className="leading-[6.410256vw] mb-0">LinkedIn</p>
-          <p className="leading-[6.410256vw] mb-0">Facebook</p>
-          <p className="leading-[6.410256vw]">X</p>
+          <p className="mobile-social-link leading-[6.410256vw] mb-0"><a href="https://www.instagram.com/zenithstudios_/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+          <p className="mobile-social-link leading-[6.410256vw] mb-0">WhatsApp</p>
+          <p className="mobile-social-link leading-[6.410256vw] mb-0">LinkedIn</p>
+          <p className="mobile-social-link leading-[6.410256vw] mb-0">Facebook</p>
+          <p className="mobile-social-link leading-[6.410256vw]">X</p>
         </div>
+        <a
+          href="#terms"
+          onClick={() => { window.location.hash = "terms" }}
+          className="absolute bottom-[6.405128vw] z-20 left-[55vw] font-['Poppins:Regular'] text-[2.564103vw] text-white translate-y-full whitespace-nowrap no-underline"
+        >Terms of service</a>
+        <a
+          href="#privacy"
+          onClick={() => { window.location.hash = "privacy" }}
+          className="absolute bottom-[6.405128vw] z-20 right-[20.769231vw] font-['Poppins:Regular'] text-[2.564103vw] text-white translate-x-full translate-y-full whitespace-nowrap no-underline"
+        >Privacy policy</a>
       </div>
     </div>
   );
