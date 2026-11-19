@@ -68,7 +68,7 @@ export default function Desktop() {
         </p>
       </div>
       <div className="absolute contents right-[-263.4px] top-[210px]" data-node-id="1:228">
-        <div className="absolute flex h-[366.062px] items-center justify-center right-[480px] top-[500px] translate-x-full w-[413.022px] overflow-visible" data-node-id="1:229">
+        <div className="absolute flex h-[366.062px] items-center justify-center right-[355px] top-[500px] translate-x-full w-[413.022px] overflow-visible" data-node-id="1:229">
           <div className="-rotate-40 flex-none desktop-hunger-window">
             <div className="desktop-hunger-track">
               <div className="desktop-hunger-copy">
