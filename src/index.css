@@ -289,6 +289,26 @@
   text-shadow: 0 0 12px rgba(212, 170, 125, 0.35);
 }
 
+.desktop-hunger-track {
+  width: max-content;
+  animation: hunger-sign-motion 10s linear infinite;
+  will-change: transform;
+}
+
+.desktop-hunger-copy {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  height: 96px;
+  padding-inline: 42px;
+  background: #d4aa7d;
+}
+
+.desktop-hunger-copy p {
+  flex: none;
+  margin: 0 180px 0 0;
+}
+
 @media (max-width: 700px) {
   body {
     min-width: 320px;

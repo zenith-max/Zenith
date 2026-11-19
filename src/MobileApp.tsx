@@ -525,30 +525,20 @@ export default function MobileApp() {
         </div>
         <a
           aria-label="Get started"
-          className="absolute bg-[#d4aa7d] bottom-[68.205128vw] h-[7.692308vw] right-[5.641026vw] rounded-[25.641026vw] w-[24.102564vw]"
+          className="absolute flex items-center justify-center bg-[#d4aa7d] bottom-[68.205128vw] h-[7.692308vw] right-[5.641026vw] rounded-[25.641026vw] w-[24.102564vw] no-underline"
           data-node-id="21:270"
           href="https://docs.google.com/forms/d/e/1FAIpQLSfV-AyYNGR29Yfb5kv_t_ZDzbvUrvuUv3F-395QJAGsIswy4Q/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
-        />
-        <p
-          className="[word-break:break-word] absolute font-helvetica-bold leading-[25.641026vw] not-italic pointer-events-none right-[28.461538vw] text-[3.846154vw] text-black top-[711.538462vw] tracking-[0.076923vw] translate-x-full whitespace-nowrap"
-          data-node-id="21:271"
         >
-          Get started
-        </p>
+          <span className="font-helvetica-bold text-[3.846154vw] font-bold tracking-[0.076923vw] text-black">Get started</span>
+        </a>
       </div>
       <div
         className="absolute contents left-0 right-[-52.564103vw] top-[746.410256vw]"
         data-node-id="21:272"
         id="contact"
       >
-        <p
-          className="[word-break:break-word] absolute bottom-[6.405128vw] font-['Poppins:Regular'] leading-[normal] not-italic right-[33.589744vw] text-[2.564103vw] text-white translate-x-full translate-y-full whitespace-nowrap"
-          data-node-id="21:276"
-        >
-          Cookies
-        </p>
         <div
           className="absolute bottom-[7.692308vw] h-0 left-[1.282051vw] right-[3.074359vw]"
           data-node-id="21:277"
@@ -567,7 +557,7 @@ export default function MobileApp() {
           className="[word-break:break-word] absolute bottom-[38.205128vw] font-['Poppins:Regular'] h-[29.230769vw] leading-[normal] left-[1.282051vw] not-italic text-[3.846154vw] text-white translate-y-full w-[75.384615vw]"
           data-node-id="21:279"
         >
-          Email : *********@gmail.com
+          Email : ram14112006@gmail.com
         </p>
         <div
           className="[word-break:break-word] absolute bottom-[39.74359vw] font-['Poppins:Regular'] leading-[0] left-0 not-italic right-[4.615385vw] text-[3.846154vw] text-right text-white translate-y-full"
